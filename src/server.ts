@@ -1,8 +1,11 @@
-import fastify from "fastify";
-import { env } from "./env/index.js";
+import fastify from 'fastify'
 
-const app = fastify();
+const app = fastify()
 
-app.listen({port: env.PORT},  () =>{
-    console.log('Server is running on port', env.PORT)
+app.listen({ port: 8000 }, (error) => {
+  if (error) {
+    console.error(error)
+    return
+  }
+  console.log('Server is running')
 })

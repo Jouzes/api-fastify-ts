@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "lint": "eslint . --ext .ts",
+    "knex": "node --import tsx ./node_modules/knex/bin/cli.js"
   },
   "repository": {
     "type": "git",
@@ -21,10 +23,22 @@
   "dependencies": {
     "dotenv": "^17.4.2",
     "fastify": "^5.8.5",
+    "knex": "^3.2.10",
+    "sqlite3": "^6.0.1",
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@rocketseat/eslint-config": "^2.2.2",
     "@types/node": "^26.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.2",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-promise": "^6.6.0",
+    "prettier": "^3.8.1",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3"
   }
